@@ -7,14 +7,16 @@ import com.example.demo.game.GameRunner;
 import com.example.demo.game.MarioGame;
 import com.example.demo.game.SuperContra;
 
-public class AppGamingBasicJava {
+public class App01GamingBasicJava {
 
 	public static void main(String[] args) {
 
-		var marioGame = new MarioGame();
-		var superContra = new SuperContra();
+//		var game = new MarioGame();
+		var game = new SuperContra();
 
-		var gameRunner = new GameRunner(marioGame);
+		var gameRunner = new GameRunner(game);
+		//game is dependency for gameRunner class
+		
 		gameRunner.run();
 	}
 

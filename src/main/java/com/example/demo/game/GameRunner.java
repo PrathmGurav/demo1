@@ -1,21 +1,21 @@
 package com.example.demo.game;
 
 public class GameRunner {
-	private MarioGame marioGame;
+	private GammingConsole game;
 	
 //** Here GameRunner Class tightly copuled to the specific game class	
-	public  GameRunner(MarioGame marioGame) {
+	public  GameRunner(GammingConsole game) {
 		// TODO Auto-generated constructor stub
-		this.marioGame = marioGame;
+		this.game = game;
 	}
 
 	public void run() {
 		// TODO Auto-generated method stub
-		System.out.println("Running Game "+ marioGame );
-		marioGame.up();
-		marioGame.down();
-		marioGame.left();
-		marioGame.rigth();
+		System.out.println("Running Game "+ game );
+		game.up();
+		game.down();
+		game.left();
+		game.rigth();
 	}
 	
 	
