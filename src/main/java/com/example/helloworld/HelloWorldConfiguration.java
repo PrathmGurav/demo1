@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.helloworld;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
@@ -23,9 +23,10 @@ public class HelloWorldConfiguration {
 	}
 	
 	//HardCoaded name, age and Address
+	//Making Class object and also passed class obj
 	@Bean
 	public Person person() {
-		Person person = new Person("Prathm", 23, new Address("Sambhajinagar", "Kolhapur"));
+		Person person = new Person("Prathm", 23, new Address("Rajarampuri", "Kolhapur"));
 		return person;
 	}
 	
