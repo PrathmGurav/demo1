@@ -1,4 +1,6 @@
-package com.example.demo.GameRelated;
+package com.example.demo.BeanPrinting.a0;
+
+import java.util.Arrays;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
@@ -9,8 +11,8 @@ import com.example.demo.game.GameRunner;
 import com.example.demo.game.GammingConsole;
 
 @Configuration
-@ComponentScan("com.example.demo.game") //To tell where is the Componets are presents
-public class GammingAppLauncherApplication {
+@ComponentScan
+public class SimpleLauncherApplication {
 
 //At the place of MarioGame @Component annotation is placed so its instance/obj will be created through GammingConsole interface
 //	@Bean
@@ -28,10 +30,10 @@ public class GammingAppLauncherApplication {
 
 	public static void main(String[] args) {
 		try (// 1 Launch a Spring context
-				var context = new AnnotationConfigApplicationContext(GammingAppLauncherApplication.class);) {
-			context.getBean(GammingConsole.class).up();
-
-			context.getBean(GameRunner.class).run();
+				var context = new AnnotationConfigApplicationContext(SimpleLauncherApplication.class);) {
+			
+			Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
+	
 
 		}
 

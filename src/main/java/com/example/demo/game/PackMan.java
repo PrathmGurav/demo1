@@ -1,5 +1,8 @@
 package com.example.demo.game;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class PackMan implements GammingConsole{
 	public void up() {
 		System.out.println("PackMan Go Up");
