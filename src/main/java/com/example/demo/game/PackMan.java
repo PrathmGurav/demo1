@@ -15,5 +15,6 @@ public class PackMan implements GammingConsole{
 	
 	public void rigth() {
 		System.out.println("PackMan Go right");
+		
 	}
 }

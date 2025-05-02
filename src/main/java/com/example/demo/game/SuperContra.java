@@ -15,5 +15,6 @@ public class SuperContra implements GammingConsole{
 	
 	public void rigth() {
 		System.out.println("SuperContra Go right");
+		
 	}
 }
