@@ -21,5 +21,6 @@ public class MarioGame implements GammingConsole{
 	public void rigth() {
 		System.out.println("MarioGame Go right");
 		
+		
 	}
 }
