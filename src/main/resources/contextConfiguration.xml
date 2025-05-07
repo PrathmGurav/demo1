@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
+
+<!-- Individually Beans are created -->
+	<bean id="name" class="java.lang.String">
+		<constructor-arg value="Prathm"></constructor-arg>
+	</bean>
+	
+	<bean id="age" class="java.lang.Integer">
+		<constructor-arg value="22"></constructor-arg>
+	</bean>
+	
+	
+<!-- All Beans from package are scanned -->
+	<!-- <context:component-scan base-package="com.example.demo.game"></context:component-scan> -->
+	
+<!-- Perticular class has made Bean -->
+	<bean id="PackMan" class="com.example.demo.game.PackMan"></bean>
+	
+	<bean id="GameRunner" class="com.example.demo.game.GameRunner">
+		<constructor-arg ref="PackMan"></constructor-arg>
+	</bean>
+	
+
+</beans>

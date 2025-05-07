@@ -1,9 +1,10 @@
 package com.example.demo.BeanPrinting.RealWorldExample;
 
 import org.springframework.context.annotation.Primary;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-@Component
+@Repository
+//@Component
 @Primary
 public class MongoDbDataService implements DataService{
 
