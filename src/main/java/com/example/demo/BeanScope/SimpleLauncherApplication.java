@@ -1,43 +1,42 @@
-package com.example.demo.Lazy;
+package com.example.demo.BeanScope;
 
 import java.util.Arrays;
-import java.util.HashSet;
 
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Lazy;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import com.example.demo.game.GameRunner;
+import com.example.demo.game.GammingConsole;
+
 @Component
-class ClassA{
+class NormalClass{
 	
 	
 }
 
+@Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 @Component
-//@Lazy
-class ClassB{
-	private ClassA classA;
+class PrototypeClass{
 	
-	public ClassB(ClassA classA) {
-		System.out.println("Some initialization Logic executed!");
-		this.classA = classA;
-	}
+	
 }
 
 
-@Configuration
 @ComponentScan
 public class SimpleLauncherApplication {
+
+
 
 	public static void main(String[] args) {
 		try (// 1 Launch a Spring context
 				var context = new AnnotationConfigApplicationContext(SimpleLauncherApplication.class);) {
-			System.out.println("Context Initialization Done!");
-			HashSet<Integer> a =new HashSet<Integer>();
-//			Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
 			
+			Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
 	
 
 		}
