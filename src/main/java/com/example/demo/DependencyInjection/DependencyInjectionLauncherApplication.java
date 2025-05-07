@@ -1,4 +1,4 @@
-package com.example.demo.DependencyInjection.a1;
+package com.example.demo.DependencyInjection;
 
 import java.util.Arrays;
 

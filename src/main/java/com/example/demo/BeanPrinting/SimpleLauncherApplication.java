@@ -1,4 +1,4 @@
-package com.example.demo.BeanPrinting.a0;
+package com.example.demo.BeanPrinting;
 
 import java.util.Arrays;
 
