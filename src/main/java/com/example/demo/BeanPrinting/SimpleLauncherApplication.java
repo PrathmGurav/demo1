@@ -34,7 +34,6 @@ public class SimpleLauncherApplication {
 			
 			Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
 	
-
 		}
 
 	}
